@@ -7,12 +7,14 @@ pipeline {
 	tools {
 		jdk 'jdk-11.0.4'
 	}
-
-	parameters {
-		string name: 'TAG_APP', defaultValue: '', description: 'Tag para imagen docker correspondiente', hidden: true
-		booleanParam name: 'BUILD', defaultValue: true, description: 'Activa la construcción de artefactos'
-	}
-
+    script{
+        if (env.BRANCH_NAME=='master'){
+            parameters {
+                string name: 'TAG_APP', defaultValue: '', description: 'Tag para imagen docker correspondiente', hidden: true
+                booleanParam name: 'BUILD', defaultValue: true, description: 'Activa la construcción de artefactos'
+            }
+         }
+    }
 	stages {
 		stage('Auditoria Ejecucion') {
 			steps{
