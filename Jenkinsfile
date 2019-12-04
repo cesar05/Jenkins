@@ -15,7 +15,7 @@ pipeline {
 
 	stages {
 
-		stage('Auditoria Ejecucion') {
+		stage('Determinando TAG_APP') {
 		    steps{
                 script{
                     if (env.BRANCH_NAME=='develop'){
@@ -23,6 +23,9 @@ pipeline {
                     }
                 }
             }
+        }
+
+        stage('Determinando BUILD') {
 			steps{
 				echo '------------> Auditoria Ejecucion <------------'
 				echo '------------> TAG_APP <------------'+ TAG_APP
