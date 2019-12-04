@@ -21,10 +21,7 @@ pipeline {
 				echo '------------> Preparación de Ambiente <------------'
 			}
 		}
-		stage('Construcción Artefactos'){
-			when {
-                echo '------------> Construcción Artefactos <------------'
-			}
+		stage('Construccion Artefactos'){
 			stages {
 				stage('Checkout') {
 					steps {
