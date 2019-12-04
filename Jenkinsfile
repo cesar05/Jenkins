@@ -5,8 +5,8 @@ pipeline {
 	}
 
 	parameters {
-		string name: 'TAG_APP', defaultValue: '', description: 'Tag para imagen docker correspondiente
-		booleanParam name: 'BUILD', defaultValue: true, description: 'Activa la construcción de artefactos
+		string name: 'TAG_APP', defaultValue: '', description: 'Tag para imagen docker correspondiente'
+		booleanParam name: 'BUILD', defaultValue: true, description: 'Activa la construcción de artefactos'
 	}
 
 	stages {
