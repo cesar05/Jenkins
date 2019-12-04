@@ -1,5 +1,9 @@
 pipeline {
 
+    agent {
+        label 'local'
+    }
+
 	tools {
 		jdk 'jdk-11.0.4'
 	}
